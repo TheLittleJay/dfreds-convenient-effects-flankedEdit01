@@ -3529,18 +3529,18 @@ export default class EffectDefinitionsDnd5e {
   get _flanked() {
     return this._effectHelpers.createActiveEffect({
       name: 'Flanked',
-      description: 'Grants advantage to all who melee attack',
+      description: 'Grants +2 bonus to all who melee attack',
       icon: 'modules/dfreds-convenient-effects/images/encirclement.svg',
       changes: [
         {
-          key: `flags.${this._flagPrefix}.grants.advantage.attack.mwak`,
+          key: `flags.${this._flagPrefix}.grants.bonus.attack.mwak`,
           mode: CONST.ACTIVE_EFFECT_MODES.CUSTOM,
-          value: '1',
+          value: '+2',
         },
         {
-          key: `flags.${this._flagPrefix}.grants.advantage.attack.msak`,
+          key: `flags.${this._flagPrefix}.grants.bonus.attack.msak`,
           mode: CONST.ACTIVE_EFFECT_MODES.CUSTOM,
-          value: '1',
+          value: '+2',
         },
       ],
     });
